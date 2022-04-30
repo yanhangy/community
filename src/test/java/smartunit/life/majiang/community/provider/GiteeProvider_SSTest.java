@@ -23,10 +23,4 @@ public class GiteeProvider_SSTest extends GiteeProvider_SSTest_scaffolding {
       GiteeUser giteeUser0 = giteeProvider0.getUser("");
       assertNull(giteeUser0);
   }
-  @Test(timeout = 4000)
-  public void test_getAccessToken_1()  throws Throwable  {
-      GiteeProvider giteeProvider0 = new GiteeProvider();
-      AccessTokenDTO accessTokenDTO0 = new AccessTokenDTO();
-      String string0 = giteeProvider0.getAccessToken(accessTokenDTO0);
-      assertNull(string0);
-  }}
+  }

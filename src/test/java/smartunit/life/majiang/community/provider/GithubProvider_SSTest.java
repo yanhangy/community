@@ -23,10 +23,4 @@ public class GithubProvider_SSTest extends GithubProvider_SSTest_scaffolding {
       GithubUser githubUser0 = githubProvider0.getUser("/S`ZG");
       assertNull(githubUser0);
   }
-  @Test(timeout = 4000)
-  public void test_getAccessToken_1()  throws Throwable  {
-      GithubProvider githubProvider0 = new GithubProvider();
-      AccessTokenDTO accessTokenDTO0 = new AccessTokenDTO();
-      String string0 = githubProvider0.getAccessToken(accessTokenDTO0);
-      assertNull(string0);
-  }}
+  }

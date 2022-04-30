@@ -43,20 +43,4 @@ public class CustomizeExceptionHandler_SSTest extends CustomizeExceptionHandler_
       ModelAndView modelAndView0 = (ModelAndView)PrivateAccess.callMethod((Class<CustomizeExceptionHandler>) CustomizeExceptionHandler.class, customizeExceptionHandler0, "handle", (Object) throwable0, (Class<?>) Throwable.class, (Object) model1, (Class<?>) Model.class, (Object) httpServletRequest0, (Class<?>) HttpServletRequest.class, (Object) httpServletResponse0, (Class<?>) HttpServletResponse.class);
       assertEquals("error", modelAndView0.getViewName());
   }
-  @Test(timeout = 4000)
-  public void test_handle_1()  throws Throwable  {
-      CustomizeExceptionHandler customizeExceptionHandler0 = new CustomizeExceptionHandler();
-      Throwable throwable0 = mock(Throwable.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      Model model0 = mock(Model.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-
-      //prepare data for httpServletRequest0
-      HttpServletRequest httpServletRequest0 = mock(HttpServletRequest.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn("application/json").when(httpServletRequest0).getContentType();
-
-      //prepare data for httpServletResponse0
-      PrintWriter printWriter0 = mock(PrintWriter.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      HttpServletResponse httpServletResponse0 = mock(HttpServletResponse.class, withSettings().defaultAnswer(new ViolatedAssumptionAnswer()).stubOnly());
-      doReturn(printWriter0).when(httpServletResponse0).getWriter();
-      Object object0 = PrivateAccess.callMethod((Class<CustomizeExceptionHandler>) CustomizeExceptionHandler.class, customizeExceptionHandler0, "handle", (Object) throwable0, (Class<?>) Throwable.class, (Object) model0, (Class<?>) Model.class, (Object) httpServletRequest0, (Class<?>) HttpServletRequest.class, (Object) httpServletResponse0, (Class<?>) HttpServletResponse.class);
-      assertNull(object0);
-  }}
+  }
